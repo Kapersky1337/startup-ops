@@ -359,6 +359,6 @@ Locally at `~/.startup-ops.env` (only readable by you) and in Claude's config fi
 
 ---
 
-## License
-
+## License & Credits
+Credits: [Ehsan](https://x.com/Ehsanomics) for instigating the idea
 [MIT](LICENSE)

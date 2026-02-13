@@ -1,0 +1,287 @@
+{
+    "version": "1.0.0",
+    "name": "startup-ops",
+    "description": "Curated MCP bundle for startup and business operations",
+    "mcpServers": {
+        "slack": {
+            "name": "Slack",
+            "category": "communication",
+            "description": "Team messaging — read/send messages, manage channels, search conversations",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@anthropic-ai/mcp-server-slack"
+            ],
+            "env": {
+                "SLACK_BOT_TOKEN": {
+                    "required": true,
+                    "description": "Slack Bot User OAuth Token (xoxb-...)",
+                    "helpUrl": "https://api.slack.com/apps"
+                },
+                "SLACK_TEAM_ID": {
+                    "required": true,
+                    "description": "Your Slack workspace Team ID",
+                    "helpUrl": "https://api.slack.com/methods/team.info"
+                }
+            },
+            "docsUrl": "https://github.com/anthropics/anthropic-mcp-servers/tree/main/src/slack"
+        },
+        "hubspot": {
+            "name": "HubSpot",
+            "category": "crm",
+            "description": "CRM — manage contacts, companies, deals, tickets",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@hubspot/mcp-server"
+            ],
+            "env": {
+                "HUBSPOT_ACCESS_TOKEN": {
+                    "required": true,
+                    "description": "HubSpot Private App Access Token",
+                    "helpUrl": "https://developers.hubspot.com/docs/api/private-apps"
+                }
+            },
+            "docsUrl": "https://www.npmjs.com/package/@hubspot/mcp-server"
+        },
+        "linear": {
+            "name": "Linear",
+            "category": "project-management",
+            "description": "Issue tracking — create/update issues, manage sprints, track projects",
+            "command": "npx",
+            "args": [
+                "-y",
+                "mcp-linear"
+            ],
+            "env": {
+                "LINEAR_API_KEY": {
+                    "required": true,
+                    "description": "Linear Personal API Key",
+                    "helpUrl": "https://linear.app/settings/api"
+                }
+            },
+            "docsUrl": "https://linear.app/docs/mcp"
+        },
+        "notion": {
+            "name": "Notion",
+            "category": "docs",
+            "description": "Docs & databases — read/write pages, query databases, manage wikis",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@notionhq/notion-mcp-server"
+            ],
+            "env": {
+                "NOTION_TOKEN": {
+                    "required": true,
+                    "description": "Notion Integration Token (secret_...)",
+                    "helpUrl": "https://www.notion.so/my-integrations"
+                }
+            },
+            "docsUrl": "https://www.npmjs.com/package/@notionhq/notion-mcp-server"
+        },
+        "telegram": {
+            "name": "Telegram",
+            "category": "communication",
+            "description": "Messaging — send/receive messages, manage groups and bots",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@pab1it0/telegram-mcp"
+            ],
+            "env": {
+                "TELEGRAM_BOT_TOKEN": {
+                    "required": true,
+                    "description": "Telegram Bot Token from @BotFather",
+                    "helpUrl": "https://t.me/botfather"
+                },
+                "TELEGRAM_API_ID": {
+                    "required": false,
+                    "description": "Telegram API ID (for user-mode features)",
+                    "helpUrl": "https://my.telegram.org/apps"
+                },
+                "TELEGRAM_API_HASH": {
+                    "required": false,
+                    "description": "Telegram API Hash (for user-mode features)",
+                    "helpUrl": "https://my.telegram.org/apps"
+                }
+            },
+            "docsUrl": "https://www.npmjs.com/package/@pab1it0/telegram-mcp"
+        },
+        "otter": {
+            "name": "Otter.ai",
+            "category": "meetings",
+            "description": "Meeting transcripts — search, download, and analyze transcriptions",
+            "command": "npx",
+            "args": [
+                "-y",
+                "otter-mcp"
+            ],
+            "env": {
+                "OTTER_EMAIL": {
+                    "required": true,
+                    "description": "Your Otter.ai account email",
+                    "helpUrl": "https://otter.ai/settings"
+                },
+                "OTTER_PASSWORD": {
+                    "required": true,
+                    "description": "Your Otter.ai account password",
+                    "helpUrl": "https://otter.ai/settings"
+                }
+            },
+            "docsUrl": "https://github.com/DarrenZal/otter-mcp"
+        },
+        "granola": {
+            "name": "Granola",
+            "category": "meetings",
+            "description": "Meeting notes — access summaries, action items, and transcripts",
+            "command": "npx",
+            "args": [
+                "-y",
+                "granola-mcp"
+            ],
+            "env": {
+                "GRANOLA_API_TOKEN": {
+                    "required": true,
+                    "description": "Granola API Token",
+                    "helpUrl": "https://granola.ai/settings"
+                }
+            },
+            "docsUrl": "https://github.com/proofgeist/granola-ai-mcp-server"
+        },
+        "google-calendar": {
+            "name": "Google Calendar",
+            "category": "productivity",
+            "description": "Calendar — view/create events, check availability, schedule meetings",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@google/calendar-mcp"
+            ],
+            "env": {
+                "GOOGLE_CLIENT_ID": {
+                    "required": true,
+                    "description": "Google OAuth 2.0 Client ID",
+                    "helpUrl": "https://console.cloud.google.com/apis/credentials"
+                },
+                "GOOGLE_CLIENT_SECRET": {
+                    "required": true,
+                    "description": "Google OAuth 2.0 Client Secret",
+                    "helpUrl": "https://console.cloud.google.com/apis/credentials"
+                },
+                "GOOGLE_REFRESH_TOKEN": {
+                    "required": true,
+                    "description": "Google OAuth 2.0 Refresh Token (from consent flow)",
+                    "helpUrl": "https://developers.google.com/identity/protocols/oauth2"
+                }
+            },
+            "docsUrl": "https://www.npmjs.com/package/@google/calendar-mcp"
+        },
+        "google-drive": {
+            "name": "Google Drive",
+            "category": "file-storage",
+            "description": "File storage — search, read, and manage files and folders",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@anthropic-ai/mcp-server-gdrive"
+            ],
+            "env": {
+                "GOOGLE_CLIENT_ID": {
+                    "required": true,
+                    "description": "Google OAuth 2.0 Client ID (same as Calendar)",
+                    "helpUrl": "https://console.cloud.google.com/apis/credentials"
+                },
+                "GOOGLE_CLIENT_SECRET": {
+                    "required": true,
+                    "description": "Google OAuth 2.0 Client Secret (same as Calendar)",
+                    "helpUrl": "https://console.cloud.google.com/apis/credentials"
+                },
+                "GOOGLE_REFRESH_TOKEN": {
+                    "required": true,
+                    "description": "Google OAuth 2.0 Refresh Token (same as Calendar)",
+                    "helpUrl": "https://developers.google.com/identity/protocols/oauth2"
+                }
+            },
+            "docsUrl": "https://github.com/anthropics/anthropic-mcp-servers/tree/main/src/gdrive"
+        },
+        "github": {
+            "name": "GitHub",
+            "category": "development",
+            "description": "Code & repos — manage repositories, issues, PRs, and code search",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@anthropic-ai/mcp-server-github"
+            ],
+            "env": {
+                "GITHUB_TOKEN": {
+                    "required": true,
+                    "description": "GitHub Personal Access Token (classic or fine-grained)",
+                    "helpUrl": "https://github.com/settings/tokens"
+                }
+            },
+            "docsUrl": "https://github.com/anthropics/anthropic-mcp-servers/tree/main/src/github"
+        },
+        "brave-search": {
+            "name": "Brave Search",
+            "category": "research",
+            "description": "Web search — real-time research and competitive intelligence",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@anthropic-ai/mcp-server-brave-search"
+            ],
+            "env": {
+                "BRAVE_API_KEY": {
+                    "required": true,
+                    "description": "Brave Search API Key",
+                    "helpUrl": "https://brave.com/search/api/"
+                }
+            },
+            "docsUrl": "https://github.com/anthropics/anthropic-mcp-servers/tree/main/src/brave-search"
+        },
+        "memory": {
+            "name": "Memory",
+            "category": "utility",
+            "description": "Knowledge graph — persistent memory across conversations (no API key needed)",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@anthropic-ai/mcp-server-memory"
+            ],
+            "env": {},
+            "docsUrl": "https://github.com/anthropics/anthropic-mcp-servers/tree/main/src/memory"
+        },
+        "zapier": {
+            "name": "Zapier",
+            "category": "automation",
+            "description": "Automation — connect 6,000+ apps with automated workflows",
+            "command": "npx",
+            "args": [
+                "-y",
+                "mcp-server-zapier"
+            ],
+            "env": {
+                "ZAPIER_MCP_API_KEY": {
+                    "required": true,
+                    "description": "Zapier MCP API Key",
+                    "helpUrl": "https://zapier.com/mcp"
+                }
+            },
+            "docsUrl": "https://zapier.com/mcp"
+        },
+        "sequential-thinking": {
+            "name": "Sequential Thinking",
+            "category": "utility",
+            "description": "Reasoning — break down complex problems step-by-step (no API key needed)",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@anthropic-ai/mcp-server-sequential-thinking"
+            ],
+            "env": {},
+            "docsUrl": "https://github.com/anthropics/anthropic-mcp-servers/tree/main/src/sequential-thinking"
+        }
+    }
+}

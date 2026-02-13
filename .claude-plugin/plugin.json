@@ -1,0 +1,10 @@
+{
+    "name": "startup-ops",
+    "description": "14 MCP integrations for startup founders and operators — Slack, HubSpot, Linear, Notion, Telegram, Otter.ai, Granola, Google Calendar, Google Drive, GitHub, Brave Search, Memory, Zapier, and Sequential Thinking.",
+    "version": "1.0.0",
+    "author": {
+        "name": "Zeel"
+    },
+    "repository": "Kapersky1337/startup-ops",
+    "license": "MIT"
+}
